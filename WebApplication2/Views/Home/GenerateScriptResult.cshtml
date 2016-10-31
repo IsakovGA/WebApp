@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "GenerateScriptResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GenerateScriptResult</h2>
+
+
+    @using (Html.BeginForm("ScriptApply", "Home", FormMethod.Post))
+    {
+        <textarea cols="200" id="text" name="text" rows="20" style="border:1px dotted #FF0000; width:80%; padding:5px; overflow:auto">
+            @ViewBag.script
+        </textarea>
+        <p>The generated query can be copied to the clipboard, save the sql file or apply the test table</p>
+        <p><input class="btn btn-default" type="submit" value="Apply to test DB >>" /></p>
+
+    }
+
+    @using (Html.BeginForm("SaveFile", "Home", FormMethod.Post))
+    {   <input type="hidden" value="@ViewBag.script" name="textForSave" />
+        <p><input class="btn btn-default" type="submit" value="Save in file >>" /></p>
+    }

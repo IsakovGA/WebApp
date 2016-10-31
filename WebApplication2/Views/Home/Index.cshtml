@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Data Generator</h1>
+    <p class="lead">Data Generator is a free web application for generate data. O rly?</p>
+    <p><a href="https://github.com/IsakovGA" class="btn btn-primary btn-lg">Github page &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Generate query</h2>
+        <p>Here you can generate a request to fill a certain number of table entries</p>
+        <p><a class="btn btn-default"> @Html.ActionLink("Generate >>", "GenerateScript", "Home") </a></p>
+    </div>
+</div>

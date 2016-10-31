@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "GenerateScript";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GenerateScript</h2>
+
+@using (Html.BeginForm("GenerateScriptResult", "Home", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td><p>Enter table name :</p></td>
+            <td><input type="text" name="tableName" /> </td>
+        </tr>
+        <tr>
+            <td><p>Enter number of records :</p></td>
+            <td><input type="number" name="entityCount" /> </td>
+        </tr>
+       
+    </table>
+    <p>
+        <input class="btn btn-default" type="submit" value="Generate >>" />
+    </p>
+}
